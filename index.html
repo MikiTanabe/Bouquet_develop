@@ -1,14 +1,21 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
     <head>
         <meta charset="utf-8">
         <title>Vue Test</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="myvue.js"></script>
     </head>
     <body>
         <div id="app">
             <p>{{message}}</p>
         </div>
+        <!--以下FireBase-->
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+<script src="js/firebasemain.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
