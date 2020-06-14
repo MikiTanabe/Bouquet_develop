@@ -1,0 +1,110 @@
+header {
+    padding-bottom: 10px;
+    box-shadow: 0px 2px 3px lightgray;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: 90px;
+}
+
+#mainWrapper {
+    padding-top: 90px;
+    z-index: 1;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+.clGray {
+    color: gray;
+}
+
+.clViolet {
+    color: violet;
+}
+
+.clPink {
+    color: salmon;
+}
+
+.smallTxt {
+    font-size: small;
+}
+
+.largeTxt {
+    font-size: x-large;
+}
+
+#flexHeaderContainer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.flexHeaderChild {
+}
+
+.contents {
+    margin-top: 20px;
+}
+
+#flexPickUpsContainer {
+    display: flex;
+    align-items: flex-start;
+}
+
+.pickUpsChild {
+    border: 1px solid;
+    border-color: pink;
+}
+
+.salon-title {
+    font-size: large;
+}
+
+.borderPink {
+    border: 1px solid;
+    border-color: pink;
+}
+
+.flexCategoryContainer {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+}
+
+.flexRight {
+    margin-left: auto;
+}
+
+.flexChkBoxContainer {
+    display: flex;
+    align-items: center;
+}
+.chkCategory {
+    margin-right: 40px;
+}
+
+.categoryWrapper {
+    padding: 15px 10px;
+}
+
+.flexPlaceContainer {
+    display: flex;
+}
+
+.place {
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 40px;
+    background-color:lavender;
+}
+
+#flexFooterMenuContainer {
+    display: flex;
+}
+
+
