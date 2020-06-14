@@ -2,20 +2,167 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
+        <!-- viewport meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Main CSS-->
+        <link rel="stylesheet" href="css/main.css">
         <title>Vue Test</title>
     </head>
     <body>
-        <div id="app">
-            <p>{{message}}</p>
+        <header>
+        <div class="container">
+            <div class="row">
+                <div class="pt-1 col-12 col-sm-6">
+                    <p class="clGray smallTxt">イメージコンサルティングサロン検索サイト</p>
+                </div>
+                <div class="col-12" id="flexHeaderContainer">
+                    <div class="col-3 flexHeaderChild clViolet largeTxt">
+                        Bouquet!
+                    </div>
+                    <div class="col-3 flexHeaderChild bg-success">
+                        検索
+                    </div>
+                    <div class="col-3 flexHeaderChild flexRight clViolet">
+                        ログイン／新規登録
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--以下FireBase-->
-<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
-<script src="js/firebasemain.js"></script>
+        </header>
+        <div id="mainWrapper">
+            <div class="container">
+                <div class="Row">
+                    <div id="contentsWrapper">
+                        <div class="contents">
+                            <div class="col-12">
+                                <h1 class="clPink">Pick Up Salon</h1>
+                            </div>
+                            <div class="col-12">
+                                <div id="flexPickUpsContainer">
+                                    <div class="col-12 col-sm-2 p-3 mr-2 pickUpsChild">
+                                        <p class="smallTxt">2020.06.11 up</p>
+                                        <img src="img/salon-no-image.jpg" class="img-fluid">
+                                        <p class="salon-title">elan Ta jour</p>
+                                        <p>顔タイプ診断/16タイプカラー診断/骨格タイプ診断</p>
+                                        <p>愛知県 名古屋</p>
+                                    </div>
+                                    <div class="col-12 col-sm-2 p-3 mr-2 pickUpsChild">
+                                        <p class="smallTxt">2020.06.11 up</p>
+                                        <img src="img/salon-no-image.jpg" class="img-fluid">
+                                        <p class="salon-title">Bimore</p>
+                                        <p>顔タイプ診断/16タイプカラー診断/骨格タイプ診断</p>
+                                        <p>東京都 日吉 etc</p>
+                                    </div>
+                                    <div class="col-12 col-sm-2 p-3 mr-2 pickUpsChild">
+                                        <p class="smallTxt">2020.06.11 up</p>
+                                        <img src="img/salon-no-image.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="col-12 col-sm-2 p-3 mr-2 pickUpsChild">
+                                        <p class="smallTxt">2020.06.11 up</p>
+                                        <img src="img/salon-no-image.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="contents">
+                            <div class="col-12">
+                                <h1 class="clPink">カテゴリー</h1>
+                            </div>
+                            <div class="categoryWrapper borderPink col-12">
+                                <div class="flexCategoryContainer">
+                                    <div class="category">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="4Colors" id="4Colors">
+                                            <label class="form-check-label chkCategory col-1 col-md-3 col-sm-12" for="4Colors">4タイプパーソナルカラー診断</label>
+                                            <input type="checkbox" class="form-check-input" value="8Colors" id="8Colors">
+                                            <label class="form-check-label  chkCategory col-1 col-md-3 col-sm-12" for="8Colors">8タイプパーソナルカラー診断</label>
+                                            <input type="checkbox" class="form-check-input" value="16Colors" id ="16Colors">
+                                            <label class="form-check-label chkCategory col-1 col-md-3 col-sm-12" for="16Colors">16タイプパーソナルカラー診断</label>
+                                        </div>
+                                    </div>
+                                    <div class="category">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" value="Frames" id="Frames">
+                                            <label class="form-check-label chkCategory col-1 col-md-3 col-sm-12" for="Frames">骨格タイプ診断</label>
+                                            <input type="checkbox" class="form-check-input" value="PD" id="PD">
+                                            <label class="form-check-label chkCategory col-1 col-md-3 col-sm-12" for="PD">パーソナルデザイン診断</label>
+                                            <input type="checkbox" class="form-check-input" value="FaceTypes" id="FaceTypes">
+                                            <label class="form-check-label chkCategory col-1 col-md-3 col-sm-12" for="FaceTypes">顔タイプ診断</label>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="category">
+                                        <div class="form-group form-check col-12">
+                                            <input type="checkbox" class="form-check-input" value="Bridal" id="Bridal">
+                                            <label class="form-check-label chkCategory col-1 col-md-3 col-sm-12" for="Bridal">ブライダル</label>
+                                            <input type="checkbox" class="form-check-input" value="MakeLessonl" id="MakeLessonl">
+                                            <label class="form-check-label chkCategory col-1 col-md-3 col-sm-12" for="MakeLessonl">メイクレッスン</label>
+                                            <input type="checkbox" class="form-check-input" value="Shopping" id="Shopping">
+                                            <label class="form-check-label chkCategory col-1 col-md-3 col-sm-12" for="Shopping">お買い物同行</label>
+                                        </div>
+                                    </div>
+                                    <div class="category">
+                                        <div class="flexPlaceContainer">
+                                            <div class="form-group place">
+                                                <label for="areaSelection">地域</label>
+                                                <select class="form-control" id="areaSelection">
+                                                <option>北海道</option>
+                                                <option>東北</option>
+                                                <option>関東</option>
+                                                <option>中部</option>
+                                                <option>関西</option>
+                                                <option>中国</option>
+                                                <option>四国</option>
+                                                <option>九州・沖縄</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group place">
+                                                <label for="prefectureSelection">都道府県</label>
+                                                <select class="form-control" id="prefectureSelection">
+                                                    <option>--選択なし--</option>
+                                                    <option>北海道</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">検索</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FireBase-->
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+        <!--<script src="js/firebasemain.js"></script>-->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="js/main.js"></script>
+        <!--<script src="js/main.js"></script>-->
+        <!-- jQuery、Popper.js、Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <footer>
+        <div class="container">
+            <div class="Row">
+                <div id="flexFooterMenuContainer">
+                    <ul>
+                        <li>新着サロンを見る</li>
+                        <li>PickUpサロンを見る</li>
+                    </ul>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>
